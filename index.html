@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Windows10使用中的技巧‘-hexo-new-Windows10使用中的技巧‘" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vps-only-ipv6" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/09/Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98-hexo-new-Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98/" class="article-date">
-  <time datetime="2020-04-09T11:31:12.107Z" itemprop="datePublished">2020-04-09</time>
+    <a href="/2020/04/18/vps-only-ipv6/" class="article-date">
+  <time datetime="2020-04-18T09:35:09.000Z" itemprop="datePublished">2020-04-18</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/09/Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98-hexo-new-Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98/">Windows10使用中的技巧‘-hexo-new-Windows10使用中的技巧‘</a>
+      <a class="article-title" href="/2020/04/18/vps-only-ipv6/">vps only ipv6</a>
     </h1>
   
 
@@ -86,12 +86,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Windows10使用中的技巧"><a href="#Windows10使用中的技巧" class="headerlink" title="#Windows10使用中的技巧"></a>#Windows10使用中的技巧</h1><hr>
-<h2 id="打开代理后应用商店和一些uwp应用无法连接网络"><a href="#打开代理后应用商店和一些uwp应用无法连接网络" class="headerlink" title="打开代理后应用商店和一些uwp应用无法连接网络"></a>打开代理后应用商店和一些uwp应用无法连接网络</h2><pre><code>下载Fiddlr 4 软件，勾选中出现问题的软件即可。 </code></pre>
+        <blockquote>
+<p>0.首先修改DNS，输入以下命令即可。为了能访问v4网址<br>    <code>echo -e &quot;nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6&quot; /etc/resolv.conf</code></p>
+</blockquote>
+<p>推荐 Ubuntu 18 LTS x64</p>
+<pre><code>sudo apt-get update
+
+sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
+
+git clone https://github.com/coolsnowwolf/lede
+
+cd lede
+
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+
+make -j8 download V=s
+
+make -j1 V=s</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/09/Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98-hexo-new-Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98/" data-id="ck8sozd7b0000eshjdj6870av" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/18/vps-only-ipv6/" data-id="ck95gaqt60002jchj1k1ea21z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -123,11 +140,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Windows10使用中的技巧"><a href="#Windows10使用中的技巧" class="headerlink" title="#Windows10使用中的技巧"></a>#Windows10使用中的技巧</h1><hr>
+<h2 id="打开代理后应用商店和一些uwp应用无法连接网络"><a href="#打开代理后应用商店和一些uwp应用无法连接网络" class="headerlink" title="打开代理后应用商店和一些uwp应用无法连接网络"></a>打开代理后应用商店和一些uwp应用无法连接网络</h2><pre><code>下载Fiddlr 4 软件，勾选中出现问题的软件即可。 </code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/14/fist-blog/" data-id="ck7rigmua0000i8hj65ov1gac" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/14/fist-blog/" data-id="ck95gaqst0000jchj3fxa4prn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/14/hello-world/" data-id="ck7rigmut0001i8hj8jlk37z4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/14/hello-world/" data-id="ck95gaqt20001jchj7plkc4sx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +235,7 @@
       <ul>
         
           <li>
-            <a href="/2020/04/09/Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98-hexo-new-Windows10%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7%E2%80%98/">Windows10使用中的技巧‘-hexo-new-Windows10使用中的技巧‘</a>
+            <a href="/2020/04/18/vps-only-ipv6/">vps only ipv6</a>
           </li>
         
           <li>
